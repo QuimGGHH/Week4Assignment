@@ -55,10 +55,13 @@ dtSubjects <- rbind(testSubject, trainSubject)
 rm(testSubject)
 rm(trainSubject)
 
-
+#Assigns real column attributes(decriptive column names) that is kept in features vector to AllDataset we have formed in previous steps. After that, select all columns that key values passing through this attributes
 names(AllDataset) <- features[ ,1]
+#Select Std and Mean
 AllDatasetStdMean <- AllDataset[ grepl("std|mean", names(AllDataset), ignore.case = TRUE)]  
 
-
+#Calculate the dataframe of Activities and labels
 AllActivitiesId <- merge(AllActivitiesId, activitiesLbl, by.x = "ActivitiesId", by.y = "Id")[2]
+
+#Calculate the final tydi dataset binding three performed dataframes of Subjects, Activities and calculations values.
 AllDatasetStdMean <- cbind(dtSubjects, AllActivitiesId, AllDatasetStdMean)
