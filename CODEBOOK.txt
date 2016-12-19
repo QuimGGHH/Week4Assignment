@@ -1,4 +1,4 @@
-We have a new dataset cleaned and performed for the assignment of week 4:
+We have calculate a new dataset cleaned and performed for the assignment of week 4:
 
 The structure is:
 
@@ -147,6 +147,12 @@ tBodyAccJerkMean
 tBodyGyroMean
 tBodyGyroJerkMean
 
+The Activity Labels used:
+* WALKING (value 1): subject was walking during the test
+* WALKING_UPSTAIRS (value 2): subject was walking up a staircase during the test
+* WALKING_DOWNSTAIRS (value 3): subject was walking down a staircase during the test
+* SITTING (value 4): subject was sitting during the test
+* STANDING (value 5): subject was standing during the test
+* LAYING (value 6): subject was laying down during the test
 
-One sample of the tydi dataset finally cleaned is:
 
